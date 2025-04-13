@@ -1,0 +1,16 @@
+{
+    "files": {
+        "README.md": "c15b5cf2d4dc0c28ce89e3762b11e73f01959e74ec2496cf9bdea4b067172a06",
+        "index.js": "cb5694895f5650ae8075074806da1f4fba073e0899aecf64ceb28061a099184e",
+        "module.json": "ead90dbd2b836d4385ab223b29dbd25b4ed8e1973de215874e1a4a661f3c03e3"
+    },
+    "defs": {
+        "C_LOAD_TOPO_FIN": "raw",
+        "C_RETURN_TO_LOBBY": "raw",
+        "C_SAVE_CLIENT_ACCOUNT_SETTING": "raw",
+        "C_SAVE_CLIENT_USER_SETTING": "raw",
+        "S_LOAD_CLIENT_ACCOUNT_SETTING": "raw",
+        "S_LOAD_CLIENT_USER_SETTING": "raw",
+        "S_RETURN_TO_LOBBY": "raw"
+    }
+}
