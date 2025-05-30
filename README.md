@@ -1,31 +1,54 @@
-# Tera Settings Saver  
-Preserve and transfer TERA client settings/keybinds between characters and servers.  
+# 🌟 Tera Settings Saver v2
+
+Easily manage, save, and load your TERA client settings (UI, keybinds, etc.) for different characters and profiles.
 
 ---
 
-## Commands  
-**Primary Command**  
-`!settings <lock|filename>`  
-- `!settings lock` - Toggle protection against accidental overwrites  
-- `!settings filename` - Load settings from a saved profile (e.g., `!settings MyChar-1001`)  
+## 🚀 Quick Start & Important First Step!
 
-**Old Commands No Longer Supported**  
-`!keybinds`, `!key`, and `!set` have been removed. Use `!settings` instead.  
+When you first log in with a character, this mod creates a settings file for them (`data/CharacterName-ServerID.json`). Your current in-game settings are **not** automatically saved to this new file.
+
+💡 **After your character loads into the game for the first time with this mod, type `settings save` to store your current setup.**
 
 ---
 
-## How It Works  
-1. Automatically creates a settings file when you enter the game.  
-2. Saved files: `TeraToolbox/mods/tera-settings-saver/data/[Character]-[ServerID].json`  
-   Example: `MyWarrior-1001.json`  
+## 🔧 Commands
+
+**Base:** `settings` (or `!settings`)
+
+* `💾 save`
+
+  * Saves your current live in-game settings to this character's file.
+* `📂 load <profilename>`
+
+  * Loads `<profilename>.json` from `data/`, overwrites this character's file, and applies settings to your live game.
+* `📝 saveas <profilename>`
+
+  * Saves your current live in-game settings to a new `data/<profilename>.json`.
+* `🔄 reload`
+
+  * Re-applies settings from this character's file to your live game.
+* `🔒 lock`
+
+  * Toggles write-protection on this character's settings file (prevents accidental `save` or `load` overwrites).
+* `📊 status`
+
+  * Shows file path, lock status, and if live settings match the character file.
 
 ---
 
-## Troubleshooting  
-- **Relog required** after loading new settings.  
-- **"Settings file not found"**:  
-  - Check exact filename (case-sensitive) in the `data` folder.  
-  - Filenames auto-sanitize special characters.  
-- **Settings reset?** The mod will auto-correct and notify you in chat.  
+## 🧠 How It Works
+
+* The mod tracks your live in-game settings and compares them to your character's saved file.
+* It will notify you if they differ.
+* **All file changes and applications to your game client are controlled by your commands.**
+
+---
+
+## 📝 Notes
+
+* **📁 File Location:** `YourToolboxFolder/mods/tera-settings-saver/data/`
+* **✅ Profile Validity:** Profiles for `load` should be valid JSON with `accountSettings` and/or `userSettings`.
+* **🧹 Auto-Sanitized Filenames:** Special characters in names are removed for filenames.
 
 ---
